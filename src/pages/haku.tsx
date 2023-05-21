@@ -51,7 +51,7 @@ const Haku = () => {
 
       <Header sticky themeColor="bg-white" />
 
-      <div className="flex flex-col items-center justify-center w-full px-16 py-20 max-w-2xl xl:max-w-4xl mx-auto">
+      { /* <div className="flex flex-col items-center justify-center w-full px-16 py-20 max-w-2xl xl:max-w-4xl mx-auto">
         <h1 className="font-[Poppins] font-bold text-2xl text-center whitespace-pre-wrap">
           {searchResults.length > 0
             ? `Hakutulokset haulle\n\"${text}\"`
@@ -142,7 +142,7 @@ const Haku = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */ }
 
       <Footer themeColor="bg-white" />
     </>
