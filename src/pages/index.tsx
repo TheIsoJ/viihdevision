@@ -13,7 +13,7 @@ function RecentVideos() {
   )
   return (
     <InfiniteVideoList
-      videos={videos.data?.pages.flatMap((page) => page.videos)}
+      videos={videos.data?.pages.map((page) => page.videos)}
       isError={videos.isError}
       isLoading={videos.isLoading}
       hasMore={videos.hasNextPage}
