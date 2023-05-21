@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .menuItem {
+      @apply hover:bg-black/20 py-2 px-4 rounded-lg cursor-pointer font-[Poppins] text-sm text-black flex justify-between items-center space-x-6 sm:space-x-16 transition-all duration-150 ease-in-out;
+    }
+    .menuItemHidden {
+      @apply flex sm:hidden;
+    }
+    .menuItemHiddenPlus {
+      @apply flex md:hidden;
+    }
+    .menuItemNonClickable {
+      @apply py-2 px-4 rounded-lg font-[Poppins] text-sm text-black flex justify-between items-center space-x-6 sm:space-x-16 transition-all duration-150 ease-in-out;
+    }
+  }

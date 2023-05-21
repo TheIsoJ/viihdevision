@@ -8,6 +8,44 @@ datasource db {
     relationMode = "prisma"
 }
 
+model Video {
+    id          String   @id @default(uuid())
+    name        String
+    description String?  @db.LongText
+    videoId     String
+    views       Int      @default(0)
+    publishDate DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+    likes       Like[]
+
+    categoryId String?
+    userId     String
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@unique([publishDate, id])
+    @@index([categoryId])
+    @@index([userId])
+}
+
+model Like {
+    userId  String
+    videoId String
+    user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+    video   Video  @relation(fields: [videoId], references: [id], onDelete: Cascade)
+
+    @@id([userId, videoId])
+    @@index([userId])
+    @@index([videoId])
+}
+
+model PromoItem {
+    id          String @id @default(uuid())
+    name        String
+    description String
+    link        String
+}
+
 // Necessary for Next auth
 model Account {
     id                String  @id @default(cuid())
@@ -46,6 +84,10 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+
+    // Non-Next Auth
+    likes  Like[]
+    videos Video[]
 }
 
 model VerificationToken {
