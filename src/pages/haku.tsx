@@ -1,8 +1,7 @@
 import Head from "next/head"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import { FormEvent, useState } from "react"
-import { useSearchResultsFetch } from "../hooks/regular-user/useSearchResultsFetch"
+import { FormEvent, useState } from "reacr/useSearchResultsFetch"
 import Link from "next/link"
 import { DotPulse } from "@uiball/loaders"
 
@@ -16,7 +15,7 @@ const Haku = () => {
   const [searchResults, setSearchResults] = useState<SearchResults[]>([])
   const [loading, setLoading] = useState<boolean>(false)
 
-  const searchPodcasts = (searchTerm: string, searchType: string) => {
+  /* const searchPodcasts = (searchTerm: string, searchType: string) => {
     if (!searchTerm) return setSearchResults([])
 
     setText(searchTerm)
@@ -37,11 +36,11 @@ const Haku = () => {
         setSearchResults([])
         console.log(e)
       })
-  }
+  } */
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
-    searchPodcasts(search, searchType)
+    // searchPodcasts(search, searchType)
   }
 
   return (
