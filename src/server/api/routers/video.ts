@@ -46,7 +46,7 @@ export const videoRouter = createTRPCRouter({
         }
       })
 
-      return { videos }
+      return videos
     }),
   getById: publicProcedure
     .input(z.object({ videoId: z.string() }))
