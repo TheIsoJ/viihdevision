@@ -6,14 +6,14 @@ import Link from "next/link"
 import { DotPulse } from "@uiball/loaders"
 
 const Haku = () => {
-  const [search, setSearch] = useState<string>("")
+  /* const [search, setSearch] = useState<string>("")
   const [searchType, setSearchType] = useState<string>("podcast")
   const [searchResultType, setSearchResultType] = useState<
     "podcast" | "episode" | null
   >("podcast")
   const [text, setText] = useState<string>("")
   const [searchResults, setSearchResults] = useState<SearchResults[]>([])
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false) */
 
   /* const searchPodcasts = (searchTerm: string, searchType: string) => {
     if (!searchTerm) return setSearchResults([])
