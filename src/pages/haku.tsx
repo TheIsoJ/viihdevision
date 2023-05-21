@@ -142,7 +142,7 @@ const Haku = () => {
         ))}
       </div> */ }
 
-      <Footer themeColor="bg-white" />
+      <Footer />
     </>
   )
 }
