@@ -17,7 +17,7 @@ function RecentVideos() {
       isError={videos.isError}
       isLoading={videos.isLoading}
       hasMore={videos.hasNextPage}
-      fetchNewTweets={videos.fetchNextPage}
+      fetchNewVideos={videos.fetchNextPage}
     />
   )
 }
